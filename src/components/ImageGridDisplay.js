@@ -26,18 +26,18 @@ function ImageGridDisplay(props) {
         <div className="col-12 col-md-6 text-center">
             <div className="row">
                 <div className="col-6 p-2">
-                    <img className="img-fluid" style={imageStyle} src={props.images[0].src} alt="Gallery Image 1" onClick={() => openModal(0)} data-bs-toggle="modal" data-bs-target="#imageModal" />
+                    <img className="img-fluid" style={imageStyle} src={props.images[0].src} alt="Gallery Image 1" onClick={() => openModal(0)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
                 <div className="col-6 p-2">
-                    <img className="img-fluid" style={imageStyle} src={props.images[1].src} alt="Gallery Image 2" onClick={() => openModal(1)} data-bs-toggle="modal" data-bs-target="#imageModal" />
+                    <img className="img-fluid" style={imageStyle} src={props.images[1].src} alt="Gallery Image 2" onClick={() => openModal(1)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
             </div>
             <div className="row">
                 <div className="col-6 p-2">
-                    <img className="img-fluid" style={imageStyle} src={props.images[2].src} alt="Gallery Image 3" onClick={() => openModal(2)} data-bs-toggle="modal" data-bs-target="#imageModal" />
+                    <img className="img-fluid" style={imageStyle} src={props.images[2].src} alt="Gallery Image 3" onClick={() => openModal(2)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
                 <div className="col-6 p-2">
-                    <img className="img-fluid" style={imageStyle} src={props.images[3].src} alt="Gallery Image 4" onClick={() => openModal(3)} data-bs-toggle="modal" data-bs-target="#imageModal" />
+                    <img className="img-fluid" style={imageStyle} src={props.images[3].src} alt="Gallery Image 4" onClick={() => openModal(3)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@ function ImageGridDisplay(props) {
 
     const mainImage = (
         <div className="col-12 col-md-6 text-center">
-            <img className="img-fluid" style={{ padding: '5px', borderRadius: '10px' }} src={props.images[4].src} alt="Main Gallery Image" onClick={() => openModal(4)} data-bs-toggle="modal" data-bs-target="#imageModal" />
+            <img className="img-fluid" style={{ padding: '5px', borderRadius: '10px' }} src={props.images[4].src} alt="Main Gallery Image" onClick={() => openModal(4)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
         </div>
     );
 
@@ -59,11 +59,11 @@ function ImageGridDisplay(props) {
                 {second}
             </div>
 
-            <div className="modal fade" id="imageModal" tabIndex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div className="modal fade" id={props.modalId} tabIndex="-1" aria-labelledby={`${props.modalId}Label`} aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-lg">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="imageModalLabel">{currentIndex !== null && props.images[currentIndex].title}</h5>
+                            <h5 className="modal-title" id={`${props.modalId}Label`}>{currentIndex !== null && props.images[currentIndex].title}</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={closeModal}></button>
                         </div>
                         <div className="modal-body text-center">

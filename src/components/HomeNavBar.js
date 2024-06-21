@@ -1,45 +1,60 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const NavBar = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+`;
+
+const NavLink = styled.p`
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #800000; // Dark red color on hover
+    }
+    
+        &:not(:last-child)::after {
+        content: '';
+        margin-left: 10px;
+
+        @media (max-width: 600px) {
+            content: '';
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin: 10px 0;
+    }
+`;
 
 function HomeNavBar() {
-    const navStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        maxWidth: '100vw', // Ensure the nav doesn't exceed the viewport width
-        overflow: 'hidden', // Prevent overflow if content exceeds container
-        padding: '10px 0',
-        boxSizing: 'border-box', // Include padding in element's total width and height
-        flexWrap: 'wrap', // Allow wrapping of items to new line
-    };
-
-    const linkStyle = {
-        margin: '0 10px',
-        textDecoration: 'none',
-        fontWeight: 'bold', // Adjusted to make it more visually appealing
-        color: 'black',
-        padding: '20px',
-        cursor: 'pointer', // Make the cursor a pointer to indicate it's clickable
-        flex: '1 1 auto', // Allow flex items to grow and shrink as needed
-        textAlign: 'center', // Center text in smaller screens
-    };
-
     const handleNavigation = (id) => {
         document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
-        <div style={navStyle}>
-            <p style={linkStyle} onClick={() => handleNavigation('gallery')}>Gallery</p>
-            <span>|</span>
-            <p style={linkStyle} onClick={() => handleNavigation('wedding')}>Wedding</p>
-            <span>|</span>
-            <p style={linkStyle} onClick={() => handleNavigation('getting-there')}>Location</p>
-            <span>|</span>
-            <p style={linkStyle} onClick={() => handleNavigation('gifts')}>Gifts</p>
-            <span>|</span>
-            <p style={linkStyle} onClick={() => handleNavigation('rsvp')}>RSVP</p>
-        </div>
+        <NavBar>
+            <NavLink onClick={() => handleNavigation('gallery')}>Gallery</NavLink>
+            <NavLink onClick={() => handleNavigation('wedding')}>Wedding</NavLink>
+            <NavLink onClick={() => handleNavigation('getting-there')}>Location</NavLink>
+            <NavLink onClick={() => handleNavigation('gifts')}>Gifts</NavLink>
+            <NavLink onClick={() => handleNavigation('rsvp')}>RSVP</NavLink>
+        </NavBar>
     );
 }
 

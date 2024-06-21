@@ -1,13 +1,18 @@
 function Section(props) {
 
     const sectionContentStyle = {
-        paddingTop: "25px"
+        // paddingTop: "25px"
     };
 
     const sectionStyle = {
-        marginTop: "20px",
-        minHeight: "80vh"
-    }
+        boxSizing: 'border-box',
+        // backgroundColor: 'rgba(255, 20, 25, 0.1)',
+        // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        // marginTop: '10px',
+        minHeight: '80vh',
+        borderBottom: '2px solid rgba(0, 0, 0, 0.1)' // Border only at the bottom
+    };
+
 
     return (
         <div>

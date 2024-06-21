@@ -34,8 +34,8 @@ function Gallery() {
     return (
         <div className="container text-start row">
             <div><h1>Gallery</h1></div>
-            <ImageGridDisplay mainImage={"left"} images={firstBlockImages}/>
-            <ImageGridDisplay mainImage={"right"} images={secondBlockImages}/>
+            <ImageGridDisplay mainImage={"left"} images={firstBlockImages} modalId="imageModal1"/>
+            <ImageGridDisplay mainImage={"right"} images={secondBlockImages} modalId="imageModal2"/>
         </div>
     );
 }
