@@ -24,11 +24,11 @@ function Gallery() {
     ];
 
     let secondBlockImages = [
-        {src: image6, title: 'abc'},
-        {src: image7, title: 'abc'},
-        {src: image8, title: 'abc'},
-        {src: image9, title: 'abc'},
-        {src: image10, title: 'abc'},
+        {src: image6, title: 'Summer 2019'},
+        {src: image7, title: 'Tarragona 2019'},
+        {src: image8, title: 'Grad Ball 2019'},
+        {src: image9, title: 'Loch Lomond January 2018' },
+        {src: image10, title: 'Simon & Rebecca\'s wedding 2017'},
     ];
 
     return (
