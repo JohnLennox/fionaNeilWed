@@ -12,9 +12,9 @@ function WeddingDetails() {
                 <div className="col-md-12">
                     <img
                         src="https://spaseekers.imgix.net/m/0/back-view.jpg?ixlib=gatsbyHook-1.7.4&fit=min&auto=format&w=800&h=600"
-                        alt="Wedding Venue" className="img-fluid rounded shadow mb-4"/>
+                        alt="Wedding Venue" className="img-fluid rounded mb-4"/>
                 </div>
-                <div className="card p-3 shadow col-md-12 text-center welcome-text">
+                <div className="card p-3 col-md-12 text-center welcome-text">
                     <h2>Important Information</h2>
                     <p><strong>Date:</strong> 17th November 2024<br/>
                         <strong>Time:</strong> 12pm<br/>
@@ -36,14 +36,14 @@ function WeddingDetails() {
 
             <div className="row mb-4">
                 <div style={{marginBottom: '20px'}} className="col-md-6 text-center mx-auto">
-                    <div className="card p-3 shadow">
+                    <div className="card p-3">
                         <h3>Our Contact Information</h3>
                         <p><strong>Our Email:</strong> <a
                             href="mailto:EmmaAndJohnWedding@outlook.com">EmmaAndJohnWedding@outlook.com</a></p>
                     </div>
                 </div>
                 <div className="col-md-6 text-center mx-auto">
-                    <div className="card p-3 shadow">
+                    <div className="card p-3">
                         <h3>Hotel Contact Information</h3>
                         <p><strong>Hotel Website:</strong> <a
                             href="https://www.inglewoodhouseandspa.co.uk/">https://www.inglewoodhouseandspa.co.uk</a>

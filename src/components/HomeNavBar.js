@@ -8,8 +8,9 @@ const NavBar = styled.div`
     align-items: center;
     width: 100%;
     padding: 10px 0;
+    
     @media (max-width: 600px) {
-        flex-direction: column;
+        display: none;
     }
 `;
 
@@ -27,14 +28,9 @@ const NavLink = styled.p`
         color: #800000; // Dark red color on hover
     }
     
-        &:not(:last-child)::after {
+    &:not(:last-child)::after {
         content: '';
         margin-left: 10px;
-
-        @media (max-width: 600px) {
-            content: '';
-            margin-left: 0;
-        }
     }
 
     @media (max-width: 600px) {

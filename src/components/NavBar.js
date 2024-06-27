@@ -3,18 +3,24 @@ import React, { useState, useEffect } from 'react';
 function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
 
+    const checkVisibility = () => {
+        const scrollHeight = window.innerHeight;
+        const screenWidth = window.innerWidth;
+        setIsVisible(window.scrollY >= scrollHeight || screenWidth <= 600);
+    };
+
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollHeight = window.innerHeight;
-            setIsVisible(window.scrollY >= scrollHeight);
-        };
+        // Add scroll and resize event listeners
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
 
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
+        // Initial check
+        checkVisibility();
 
-        // Cleanup event listener on component unmount
+        // Cleanup event listeners on component unmount
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', checkVisibility);
+            window.removeEventListener('resize', checkVisibility);
         };
     }, []);
 
@@ -23,14 +29,14 @@ function NavBar() {
     }
 
     const navStyle = {
-        position: 'fixed',
+        position: 'sticky',
         top: 0,
         width: '100%',
-        zIndex: 1000,
+        zIndex: 1000
     };
 
     return (
-        <div style={navStyle} className={""}>
+        <div style={navStyle}>
             <nav className="navbar container-fluid navbar-expand-lg justify-content-center navbar-light bg-light sticky-top">
                 <a className="navbar-brand d-flex w-50 me-auto" style={{ paddingLeft: '10px', fontFamily: "Dancing Script" }} href="#">Emma & John</a>
                 <button className="navbar-toggler" type="button" style={{ marginRight: '10px' }} data-bs-toggle="collapse"
