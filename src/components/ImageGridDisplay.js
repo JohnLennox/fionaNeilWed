@@ -71,10 +71,10 @@ function ImageGridDisplay(props) {
                                 <img src={props.images[currentIndex].src} className="img-fluid" alt="Selected" />
                             )}
                         </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex - 1 + props.images.length) % props.images.length)}>Previous</button>
-                            <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex + 1) % props.images.length)}>Next</button>
-                        </div>
+                        {/*<div className="modal-footer">*/}
+                        {/*    <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex - 1 + props.images.length) % props.images.length)}>Previous</button>*/}
+                        {/*    <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex + 1) % props.images.length)}>Next</button>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>

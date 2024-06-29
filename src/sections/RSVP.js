@@ -14,7 +14,7 @@ function RSVP() {
             pairs.push(
                 <div className="row" key={`row-${i}`}>
                     <div className="col-md-6">
-                        <h2>Adult {i + 1} menu choice </h2>
+                        <h2>Adult {i + 1} Menu Choice</h2>
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSc7K4BuG0BLFpnSYskAIbN2wwi0ffq43aJhQ_jNRLZk2dEXYQ/viewform?embedded=true"
                             width="100%"
@@ -26,9 +26,9 @@ function RSVP() {
                     </div>
                     {i + 1 < peopleCount && (
                         <div className="col-md-6">
-                            <h2>Adult {i + 2} menu choice </h2>
+                            <h2>Adult {i + 2} Menu Choice</h2>
                             <iframe
-                                src="https://docs.google.com/forms/d/e/1FAIpQLSecmOoXS_vk7qFSIoJNJOkZ14J5vmmW_M0y-tj0cK3zSMonrA/viewform?embedded=true"
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSc7K4BuG0BLFpnSYskAIbN2wwi0ffq43aJhQ_jNRLZk2dEXYQ/viewform?embedded=true"
                                 width="100%"
                                 height="500px"
                                 title={`RSVP Form for Person ${i + 2}`}
@@ -43,22 +43,26 @@ function RSVP() {
         return pairs;
     };
 
+    const labelStyle = {
+        marginRight: '10px'
+    };
+
     const selectStyle = {
-        paddingRight: '5px',
-        paddingBottom: '10px'
-    }
+        width: 'auto',
+        display: 'inline-block'
+    };
 
     return (
         <div className="sectionContent text-start">
             <h1>RSVP</h1>
-            <p>Please let us know if you can make it!</p>
-            <div className={"row"} style={{width: '50%'}}>
-                <div className={"col"} style={{textAlign: 'start'}}>
-                    <label style={selectStyle} htmlFor="people-select">Number of Adults: </label>
+            <p>Please let us know if you can join us in celebrating our special day!</p>
+            <div className="row align-items-center mb-3">
+                <div className="col-auto">
+                    <label htmlFor="people-select" style={labelStyle}>Number of Adults:</label>
                 </div>
-                <div className={"col"} style={{textAlign: 'end'}}>
+                <div className="col-auto">
                     <select className="form-select" id="people-select" value={peopleCount}
-                            onChange={handlePeopleChange}>
+                            onChange={handlePeopleChange} style={selectStyle}>
                         {[...Array(5)].map((_, i) => (
                             <option key={i} value={i + 1}>{i + 1}</option>
                         ))}

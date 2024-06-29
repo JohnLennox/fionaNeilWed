@@ -33,9 +33,12 @@ function Countdown() {
 
     return (
         <div>
-            <h3>
-                {timeLeft.days || 0} days {timeLeft.hours || 0} hours {timeLeft.minutes || 0} minutes until <strong>"I do"</strong>
-            </h3>
+            <p style={{fontSize: '1.2rem', marginBottom: 0}}>
+                {timeLeft.days || 0} days {timeLeft.hours || 0} hours {timeLeft.minutes || 0} minutes until
+            </p>
+            <p style={{fontSize: '1.7rem', fontFamily: 'Dancing Script', fontWeight: 'bold'}}>
+                "I do"
+            </p>
         </div>
     );
 }

@@ -4,10 +4,11 @@ import HomeNavBar from "../components/HomeNavBar";
 
 function Home() {
     return (
-        <div className="sectionContent">
-            <div className="welcome-text" style={{fontSize: '3vw'}}>
+
+        <div className="sectionContent text-center">
+            <div className="welcome-text">
                 <h1 style={{fontSize: '7vw'}}> Emma & John</h1>
-                <h1 style={{fontSize: '4vw'}}> are getting married!</h1>
+                <h2 style={{fontWeight: 5}}> are getting married!</h2 >
             </div>
 
             <div>
@@ -15,7 +16,7 @@ function Home() {
                 <HomeNavBar/>
             </div>
 
-            <div className="container" style={{padding: '20px'}}>
+            <div className="container" style={{padding: '20px', }}>
                 <div className="row">
                     <div className="col-lg-1"></div>
                     <div className="col-lg-10">

@@ -7,30 +7,26 @@ const NavBar = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 10px 0;
-    
+    padding-top: 20px;
     @media (max-width: 600px) {
         display: none;
     }
 `;
 
 const NavLink = styled.p`
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
     color: black;
-    padding: 10px 15px;
     cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
     &:hover {
         color: #800000; // Dark red color on hover
     }
-    
+
     &:not(:last-child)::after {
-        content: '';
-        margin-left: 10px;
+        content: '|';
+        margin: 20px;
+        color: black;
     }
 
     @media (max-width: 600px) {

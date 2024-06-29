@@ -6,6 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .mainContent {
     background-image: url("resources/images/background.webp");
     background-repeat: no-repeat;
@@ -13,15 +14,16 @@ body {
     background-position: top;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 300;
+    font-style: normal;
 }
 
-h1, h2, p, h3 {
-    font-family: 'Dancing Script', cursive;
-}
+/* Paragraphs */
+p, li {
+    font-family: 'Playfair Display', serif;
+    color: black;
 
-p {
-    font-size: 1.1rem;
 }
