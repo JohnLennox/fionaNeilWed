@@ -7,8 +7,8 @@ function Home() {
 
         <div className="sectionContent text-center">
             <div className="welcome-text">
-                <h1 style={{fontSize: '7vw'}}> Emma & John</h1>
-                <h2 style={{fontWeight: 5}}> are getting married!</h2 >
+                <h1 style={{fontSize: 'clamp(20px, 7vw, 90px)'}}> Emma & John</h1>
+                <h1 style={{fontSize: 'clamp(20px, 4vw, 60px)', fontWeight: 5, fontFamily: "Dancing Script"}}> are getting married!</h1 >
             </div>
 
             <div>

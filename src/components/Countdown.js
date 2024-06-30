@@ -33,10 +33,10 @@ function Countdown() {
 
     return (
         <div>
-            <p style={{fontSize: '1.2rem', marginBottom: 0}}>
+            <p style={{fontSize: 'clamp(20px, 3vw, 35px)', marginBottom: 0}}>
                 {timeLeft.days || 0} days {timeLeft.hours || 0} hours {timeLeft.minutes || 0} minutes until
             </p>
-            <p style={{fontSize: '1.7rem', fontFamily: 'Dancing Script', fontWeight: 'bold'}}>
+            <p style={{fontSize: 'clamp(20px, 4vw, 50px)', fontFamily: 'Dancing Script', fontWeight: 'bold'}}>
                 "I do"
             </p>
         </div>

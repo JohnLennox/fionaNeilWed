@@ -8,8 +8,7 @@ function ImageGridDisplay(props) {
     const imageStyle = {
         padding: '5px',
         borderRadius: '10px',
-        height: 'auto', // Maintain aspect ratio
-        minHeight: '300px',
+        height: '100%', // Ensure the image takes full height of its container
         width: '100%',  // Ensure the image takes full width of its container
         objectFit: 'cover' // Ensure the image covers the container while maintaining aspect ratio
     };
@@ -25,18 +24,18 @@ function ImageGridDisplay(props) {
     const grid = (
         <div className="col-12 col-md-6 text-center">
             <div className="row">
-                <div className="col-6 p-2">
+                <div className="col-6 p-2" style={{ }}>
                     <img className="img-fluid" style={imageStyle} src={props.images[0].src} alt="Gallery Image 1" onClick={() => openModal(0)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
-                <div className="col-6 p-2">
+                <div className="col-6 p-2" style={{ }}>
                     <img className="img-fluid" style={imageStyle} src={props.images[1].src} alt="Gallery Image 2" onClick={() => openModal(1)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
             </div>
             <div className="row">
-                <div className="col-6 p-2">
+                <div className="col-6 p-2" style={{ }}>
                     <img className="img-fluid" style={imageStyle} src={props.images[2].src} alt="Gallery Image 3" onClick={() => openModal(2)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
-                <div className="col-6 p-2">
+                <div className="col-6 p-2" style={{ }}>
                     <img className="img-fluid" style={imageStyle} src={props.images[3].src} alt="Gallery Image 4" onClick={() => openModal(3)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
                 </div>
             </div>
@@ -44,8 +43,8 @@ function ImageGridDisplay(props) {
     );
 
     const mainImage = (
-        <div className="col-12 col-md-6 text-center">
-            <img className="img-fluid" style={{ padding: '5px', borderRadius: '10px' }} src={props.images[4].src} alt="Main Gallery Image" onClick={() => openModal(4)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
+        <div className="col-12 col-md-6 text-center" style={{ height: '100%' }}>
+            <img className="img-fluid" style={{ ...imageStyle, height: '100%' }} src={props.images[4].src} alt="Main Gallery Image" onClick={() => openModal(4)} data-bs-toggle="modal" data-bs-target={`#${props.modalId}`} />
         </div>
     );
 
@@ -71,10 +70,6 @@ function ImageGridDisplay(props) {
                                 <img src={props.images[currentIndex].src} className="img-fluid" alt="Selected" />
                             )}
                         </div>
-                        {/*<div className="modal-footer">*/}
-                        {/*    <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex - 1 + props.images.length) % props.images.length)}>Previous</button>*/}
-                        {/*    <button type="button" className="btn btn-secondary" onClick={() => setCurrentIndex((currentIndex + 1) % props.images.length)}>Next</button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </div>

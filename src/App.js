@@ -10,7 +10,7 @@ import RSVP from "./sections/RSVP";
 
 function App() {
     return (
-        <div style={{backgroundColor: 'rgba(250, 200, 200, 0.2)'}}>
+        <div style={{backgroundColor: '#E6E5DC'}}>
             <NavBar/>
             <div className={'mainContent'}>
                 <Section id="home" content={<Home/>}/>

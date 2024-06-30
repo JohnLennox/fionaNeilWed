@@ -18,6 +18,7 @@ const NavLink = styled.p`
     color: black;
     cursor: pointer;
     transition: all 0.2s ease;
+    font-size: clamp(12px, 2vw, 20px);
 
     &:hover {
         color: #800000; // Dark red color on hover
@@ -43,7 +44,7 @@ function HomeNavBar() {
         <NavBar>
             <NavLink onClick={() => handleNavigation('gallery')}>Gallery</NavLink>
             <NavLink onClick={() => handleNavigation('wedding')}>Wedding</NavLink>
-            <NavLink onClick={() => handleNavigation('getting-there')}>Location</NavLink>
+            <NavLink onClick={() => handleNavigation('getting-there')}>Getting There</NavLink>
             <NavLink onClick={() => handleNavigation('gifts')}>Gifts</NavLink>
             <NavLink onClick={() => handleNavigation('rsvp')}>RSVP</NavLink>
         </NavBar>
