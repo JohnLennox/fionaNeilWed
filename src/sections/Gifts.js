@@ -1,25 +1,20 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function Gifts() {
     return (
         <div className="sectionContent text-start">
-            <h1>Gifts</h1>
+            <div className="row mb-4">
+                <div className="col-md-12">
+                    <h1>Gifts</h1>
+                </div>
+            </div>
 
-            <p> As we start this exciting new chapter in our lives, the greatest gift we could ask for is your
-                presence
-                at
-                our wedding, celebrating our love and the journey that lies ahead. Your support and love mean
-                the world to
-                us.</p>
+            <p>Your presence at our wedding is more than enough! But if you would like to give us something extra we would be very grateful for anything you wish to gift, whether it be money, vouchers, or something special to commemorate our special day!</p>
 
-            <p>We understand that some of you may wish to commemorate this occasion with a gift. While your
-                presence is
-                truly the only gift we need, if you do wish to celebrate our union in this way, we would
-                gratefully
-                appreciate a monetary contribution towards our future dreams and endeavors.</p>
-
-            <p> Please know that your generosity and thoughtfulness, in whatever form it comes, are deeply
-                appreciated and will always be remembered with fondness. </p>
+            <p>There will be an area provided for cards at the wedding venue but if you prefer to send a card or gift by post, please find our address in the <a href="#contact">‘Contact Details’</a> section.</p>
         </div>
-    )
+    );
 }
 
 export default Gifts;

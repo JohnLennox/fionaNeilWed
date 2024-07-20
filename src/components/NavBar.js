@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
@@ -6,7 +7,7 @@ function NavBar() {
     const checkVisibility = () => {
         const scrollHeight = window.innerHeight;
         const screenWidth = window.innerWidth;
-        setIsVisible(window.scrollY >= scrollHeight || screenWidth <= 600);
+        setIsVisible(window.scrollY >= scrollHeight || screenWidth <= 700);
     };
 
     useEffect(() => {
@@ -32,13 +33,30 @@ function NavBar() {
         position: 'sticky',
         top: 0,
         width: '100%',
-        zIndex: 1000
+        zIndex: 1000,
+        whiteSpace: 'nowrap' // Ensures menu items are on a single line
+    };
+
+    const navLinkStyle = {
+        position: 'relative',
+        paddingLeft: '10px',
+        paddingRight: '10px'
+    };
+
+    const navLinkAfterStyle = {
+        content: "'|'",
+        position: 'absolute',
+        right: '-10px',
+        top: '0',
+        bottom: '0',
+        display: 'flex',
+        alignItems: 'center'
     };
 
     return (
         <div style={navStyle}>
             <nav className="navbar container-fluid navbar-expand-lg justify-content-center navbar-light bg-light sticky-top">
-                <a className="navbar-brand d-flex w-50 me-auto" style={{ paddingLeft: '10px', fontFamily: "Dancing Script" }} href="#">Emma & John</a>
+                <a className="navbar-brand d-flex w-50 me-auto" style={{ paddingLeft: '10px', fontFamily: "Playfair Display" }} href="#">Emma & John</a>
                 <button className="navbar-toggler" type="button" style={{ marginRight: '10px' }} data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,12 +64,13 @@ function NavBar() {
                 </button>
                 <div className="navbar-collapse collapse w-100" style={{ marginLeft: '10px' }} id="navbarNav">
                     <ul className="navbar-nav w-100 justify-content-center">
-                        <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#gallery">Gallery</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#wedding">Wedding</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#getting-there">Getting There</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#gifts">Gifts</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#rsvp">RSVP</a></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#home">Home</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gallery">Gallery</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#wedding">Wedding Details</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#getting-there">Getting There</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gifts">Gifts</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#rsvp">RSVP</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#contact">Contact Details</a></li>
                     </ul>
                 </div>
                 <div className="w-50 justify-content-end" />

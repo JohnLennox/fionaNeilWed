@@ -1,41 +1,44 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const styles = {
+    textStart: {
+        textAlign: 'left'
+    },
+    textCenter: {
+        textAlign: 'center'
+    }
+};
 
 function GettingThere() {
     return (
         <div className="container mt-5">
-            <div className="row welcome-text text-center mb-4">
-                <h1>Guest Information</h1>
+            <div className="row mb-4">
+                <div className="col-md-12">
+                    <h1>Getting There</h1>
+                </div>
             </div>
 
             <div className="row mb-4">
-                <div className="col-md-12 text-center">
-                    <div className="card p-3 shadow mb-4">
-                        <h1>Getting There</h1>
-                        <div className={"text-start"}>
-                            <h3>Directions by Car</h3>
-                            <br/>
-                            <p>It takes around 45 minutes to drive to Inglewood House & Spa from Glasgow city
-                                centre.</p>
-                            <br/>
-                            <h3>Public Transport</h3>
-                            <p> Alloa train
-                                station is a 7 minute car journey from the venue, with trains to and from Glasgow
-                                typically
-                                running
-                                once per hour on a Sunday. The train journey from Glasgow to Alloa is approximately 45
-                                minutes.</p>
-                        </div>
+                <div className="col-md-12">
+                    <h2>Travel</h2>
+                    <div style={styles.textStart}>
+                        <p>There are plenty of parking spaces available at the venue for those wishing to travel by car. It takes around 45 minutes to drive to Inglewood House & Spa from Glasgow, and 15 minutes to drive from Stirling.</p>
+
+                        <p>If you don’t fancy driving, Alloa train station is just over a mile away from Inglewood House & Spa and it takes only 45 minutes from Glasgow Queen Street Station. From Alloa Station, the wedding venue is a 25 minute walk away, or 7 minutes in a taxi. If you choose to travel by train, please make sure to check your journey in advance. As the wedding is on a Sunday, train services may be less frequent than usual.</p>
+
+                        <p>Train timetables and further information can be found on the ScotRail website: <a href="https://www.scotrail.co.uk" target="_blank" rel="noopener noreferrer">ScotRail</a></p>
                     </div>
                 </div>
             </div>
 
             <div className="row mb-4">
-                <div className="col-md-12 text-center">
-                    <div className="card p-3 shadow mb-4">
-                        <h2>Alloa Hotels & Taxis</h2>
-                        <p>https://www.ihg.com/holidayinnexpress/hotels/gb/en/stirling/siruk/hoteldetail - 12 min car journey</p>
-                        <p>https://www.premierinn.com/gb/en/hotels/scotland/central/falkirk/falkirk-north.html?cid=GLBC_FALBOW - 15 minute car journey</p>
-                        <p>Booking.com : https://www.booking.com/searchresults.en-gb.html?aid=303948&label=alloa-V7xx8y0sMZFaDdkyBWMBmQS393123143455%3Apl%3Ata%3Ap15%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-360087309%3Alp1007336%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9Yf5EcukO1MOGLSSAuId8ToA&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-TMmGS3IXKv30AOu__1UdtlkkfZG-6gU5PCmj27n8QlLuFes2LZrhRoCoJ4QAvD_BwE&dest_type=city&redirected=1&dest_id=-2588118&source=city&redirected_from_city=1&keep_landing=1&sid=e1640d6b9683dc6021ad4658c45e6de9</p>
+                <div className="col-md-12">
+                    <h2>Accommodation</h2>
+                    <div style={styles.textStart}>
+                        <p>Accommodation at Inglewood House & Spa is limited as most rooms have been reserved for close family of the bride and groom. But if you need a place to stay after the wedding, don’t worry! There are a number of other hotels located close by, including a Holiday Inn and Premier Inn in Stirling. You can explore places to stay in Alloa and Stirling here: <a href="https://www.booking.com/searchresults.en-gb.html?ss=Stirling&ssne=Stirling&ssne_untouched=Stirling&efdco=1&label=gen173nr-1BCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQ3YAQHoAQGIAgGoAgO4AoGG27QGwAIB0gIkZmE0N2ZmZGEtZWI4Ny00Nzk0LWE4ZDEtMGI2ZjFmZTk5ZGE02AIF4AIB&sid=14fbf8e24d89e1d854bbcd72817c12a0&aid=304142&lang=en-gb&sb=1&src_elem=sb&src=searchresults&dest_id=-2608742&dest_type=city&checkin=2024-11-17&checkout=2024-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener noreferrer">Booking.com</a></p>
+
+                        <p>If you have a room reserved at Inglewood House & Spa, please get in touch with reception to pay the remaining balance for the room at least 4 weeks before the wedding (20th October).</p>
                     </div>
                 </div>
             </div>

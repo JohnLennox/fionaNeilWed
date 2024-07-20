@@ -7,6 +7,7 @@ import WeddingDetails from "./sections/WeddingDetails";
 import Gallery from "./sections/Gallery";
 import Home from "./sections/Home";
 import RSVP from "./sections/RSVP";
+import ContactDetails from "./sections/ContactDetails";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Section id="getting-there" content={<GettingThere/>}/>
                 <Section id="gifts" content={<Gifts/>}/>
                 <Section id="rsvp" content={<RSVP/>}/>
+                <Section id="contact" content={<ContactDetails/>}/>
             </div>
         </div>
     );

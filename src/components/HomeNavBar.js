@@ -8,7 +8,8 @@ const NavBar = styled.div`
     align-items: center;
     width: 100%;
     padding-top: 20px;
-    @media (max-width: 600px) {
+    white-space: nowrap; // Ensure items are not split over two lines
+    @media (max-width: 700px) {
         display: none;
     }
 `;
@@ -26,7 +27,7 @@ const NavLink = styled.p`
 
     &:not(:last-child)::after {
         content: '|';
-        margin: 20px;
+        margin: 0 20px;
         color: black;
     }
 
@@ -43,10 +44,11 @@ function HomeNavBar() {
     return (
         <NavBar>
             <NavLink onClick={() => handleNavigation('gallery')}>Gallery</NavLink>
-            <NavLink onClick={() => handleNavigation('wedding')}>Wedding</NavLink>
+            <NavLink onClick={() => handleNavigation('wedding')}>Wedding Details</NavLink>
             <NavLink onClick={() => handleNavigation('getting-there')}>Getting There</NavLink>
             <NavLink onClick={() => handleNavigation('gifts')}>Gifts</NavLink>
             <NavLink onClick={() => handleNavigation('rsvp')}>RSVP</NavLink>
+            <NavLink onClick={() => handleNavigation('contact')}>Contact Details</NavLink>
         </NavBar>
     );
 }
