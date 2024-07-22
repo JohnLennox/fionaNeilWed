@@ -25,6 +25,9 @@ h1 {
     font-weight: 300;
     font-style: normal;
 }
+h2{
+    padding-bottom: 5px;
+}
 
 /* Paragraphs */
 p, li {

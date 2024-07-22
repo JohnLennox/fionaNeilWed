@@ -18,7 +18,7 @@ function RSVP() {
         for (let i = 0; i < peopleCount; i += 2) {
             pairs.push(
                 <div className="row" key={`adult-row-${i}`}>
-                    <div className="col-md-6">
+                    <div className="col-md-6" style={{paddingTop: '20px'}}>
                         <h2><strong>Adult {i + 1}</strong></h2>
                         <iframe width="100%"
                                 height="500px"
@@ -48,7 +48,7 @@ function RSVP() {
         for (let i = 0; i < childCount; i += 2) {
             pairs.push(
                 <div className="row" key={`child-row-${i}`} style={{paddingTop: '20px'}}>
-                    <div className="col-md-6">
+                    <div className="col-md-6" style={{paddingTop: '20px'}}>
                         <h2><strong>Child {i + 1}</strong></h2>
                         <iframe width="100%"
                                 style={{borderRadius: '7px'}}
