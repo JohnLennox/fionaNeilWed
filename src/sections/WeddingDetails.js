@@ -10,10 +10,10 @@ const styles = {
     infoText: {
         fontFamily: 'Playfair Display, serif',
         paddingTop: '10px',
-        fontSize: 'clamp(20px, 2vw, 20px)'
+        // fontSize: 'clamp(20px, 2vw, 20px)'
     },
     noWrapText: {
-        fontFamily: 'Playfair Display, serif',
+        // fontFamily: 'Playfair Display, serif',
         whiteSpace: 'nowrap',
         paddingRight: '10px'
     },

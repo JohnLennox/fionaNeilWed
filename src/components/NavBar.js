@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Collapse } from 'bootstrap'; // Import Bootstrap's Collapse class
 
 function NavBar() {
     const [isVisible, setIsVisible] = useState(false);
-    const navbarCollapseRef = useRef(null);
 
     const checkVisibility = () => {
         const scrollHeight = window.innerHeight;
@@ -26,30 +24,6 @@ function NavBar() {
             window.removeEventListener('resize', checkVisibility);
         };
     }, []);
-
-    const handleNavLinkClick = (event) => {
-        // Prevent default link behavior
-        event.preventDefault();
-
-        if (navbarCollapseRef.current && window.innerWidth < 992) {
-            const bsCollapse = new Collapse(navbarCollapseRef.current);
-            bsCollapse.hide(); // Smoothly hide the collapse element
-        }
-
-        const targetId = event.target.getAttribute('href').slice(1); // Get the target element id
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            const offset = 300; // Adjust this value based on your navbar height
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = elementPosition - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
 
     if (!isVisible) {
         return null;
@@ -79,6 +53,13 @@ function NavBar() {
         alignItems: 'center'
     };
 
+    const handleNavClick = () => {
+        const navbarCollapse = document.getElementById('navbarNav');
+        if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    };
+
     return (
         <div style={navStyle}>
             <nav className="navbar container-fluid navbar-expand-lg justify-content-center navbar-light bg-light sticky-top">
@@ -88,15 +69,15 @@ function NavBar() {
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="navbar-collapse collapse w-100" style={{ marginLeft: '10px' }} id="navbarNav" ref={navbarCollapseRef}>
+                <div className="navbar-collapse collapse w-100" style={{ marginLeft: '10px' }} id="navbarNav">
                     <ul className="navbar-nav w-100 justify-content-center">
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#home" onClick={handleNavLinkClick}>Home</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gallery" onClick={handleNavLinkClick}>Gallery</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#wedding" onClick={handleNavLinkClick}>Wedding Details</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#getting-there" onClick={handleNavLinkClick}>Getting There</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gifts" onClick={handleNavLinkClick}>Gifts</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#rsvp" onClick={handleNavLinkClick}>RSVP</a><span style={navLinkAfterStyle}></span></li>
-                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#contact" onClick={handleNavLinkClick}>Contact Details</a></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#home" onClick={handleNavClick}>Home</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gallery" onClick={handleNavClick}>Gallery</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#wedding" onClick={handleNavClick}>Wedding Details</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#getting-there" onClick={handleNavClick}>Getting There</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#gifts" onClick={handleNavClick}>Gifts</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#rsvp" onClick={handleNavClick}>RSVP</a><span style={navLinkAfterStyle}></span></li>
+                        <li className="nav-item" style={navLinkStyle}><a className="nav-link" href="#contact" onClick={handleNavClick}>Contact Details</a></li>
                     </ul>
                 </div>
                 <div className="w-50 justify-content-end" />
