@@ -105,7 +105,7 @@ function RSVP() {
             </div>
             <div className="row align-items-center mb-3 mt-4">
                 <div className="col-9">
-                    <label htmlFor="children-select" style={labelStyle}>Please select the number of children you are
+                    <label htmlFor="children-select" style={labelStyle}>Please select the number of children (aged 12 and under) you are
                         responding for:</label>
                 </div>
                 <div className="col-3">

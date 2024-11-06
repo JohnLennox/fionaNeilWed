@@ -35,7 +35,12 @@ function GettingThere() {
 
                         <p>Train timetables and further information can be found on the ScotRail website: <a
                             href="https://www.scotrail.co.uk" target="_blank" rel="noopener noreferrer">ScotRail</a></p>
+
+                        <h3>Taxi Numbers</h3>
+                        <p><strong>Buchan Town Cars: </strong> 01259 213 215</p>
+                        <p><strong>AppiCab: </strong> 01259 202 020</p>
                     </div>
+
 
                     <div className="mt-4" style={styles.textCenter}>
                         <iframe
