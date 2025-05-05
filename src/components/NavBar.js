@@ -63,7 +63,7 @@ function NavBar() {
     return (
         <div style={navStyle}>
             <nav className="navbar container-fluid navbar-expand-lg justify-content-center navbar-light bg-light sticky-top">
-                <a className="navbar-brand d-flex w-50 me-auto" style={{ paddingLeft: '10px', fontFamily: "Playfair Display" }} href="#">Emma & John</a>
+                <a className="navbar-brand d-flex w-50 me-auto" style={{ paddingLeft: '10px', fontFamily: "Playfair Display" }} href="#">Fiona & Neil</a>
                 <button className="navbar-toggler" type="button" style={{ marginRight: '10px' }} data-bs-toggle="collapse"
                         data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -16,7 +16,7 @@ const NavBar = styled.div`
 
 const NavLink = styled.p`
     font-family: 'Playfair Display', serif;
-    color: black;
+    // color: black;
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: clamp(12px, 2vw, 20px);

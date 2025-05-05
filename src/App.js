@@ -8,10 +8,15 @@ import Gallery from "./sections/Gallery";
 import Home from "./sections/Home";
 import RSVP from "./sections/RSVP";
 import ContactDetails from "./sections/ContactDetails";
+import {useState} from "react";
 
 function App() {
+
+    const [colour, setColour] = useState('#E6E5DC');
+    const [textColour, setTextColour] = useState('#000000');
+
     return (
-        <div style={{backgroundColor: '#E6E5DC'}}>
+        <div style={{backgroundColor: colour, color: textColour}}>
             <NavBar/>
             <div className={'mainContent'}>
                 <Section id="home" content={<Home/>}/>
@@ -21,6 +26,11 @@ function App() {
                 <Section id="gifts" content={<Gifts/>}/>
                 <Section id="rsvp" content={<RSVP/>}/>
                 <Section id="contact" content={<ContactDetails/>}/>
+                <p>Background colour</p>
+                <input type={"color"} value={colour} onChange={(event) =>setColour(event.target.value)}/>
+
+                <p>Text colour</p>
+                <input type={"color"} value={textColour} onChange={(event) =>setTextColour(event.target.value)}/>
             </div>
         </div>
     );

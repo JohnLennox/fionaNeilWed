@@ -3,7 +3,7 @@ import confetti from "canvas-confetti"; // Import canvas-confetti
 
 function Countdown() {
     const calculateTimeLeft = () => {
-        const endDate = new Date("November 17, 2024 14:00:00").getTime();
+        const endDate = new Date("November 30, 2025 14:00:00").getTime();
         const now = new Date().getTime();
         const difference = endDate - now;
 

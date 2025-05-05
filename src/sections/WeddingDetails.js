@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import image1 from '../resources/images/Boclair photo_cta.JPG';
 
 const styles = {
     sectionTitle: {
@@ -29,10 +30,10 @@ const styles = {
 };
 
 const weddingInfo = [
-    {label: 'Date:', value: '17th November 2024'},
-    {label: 'Time:', value: '2pm arrival for 2.30pm ceremony'},
-    {label: 'Location:', value: "Inglewood House & Spa,<br>Alloa,<br>FK10&nbsp;2HU"},
-    {label: 'Dress Code:', value: 'Formal'}
+    {label: 'Date:', value: '30th November 2025'},
+    {label: 'Time:', value: '1pm'},
+    {label: 'Location:', value: "Boclair House,<br>100 Milngavie Road,<br>Bearsden,<br>Glasgow,<br>G61&nbsp;2TQ"},
+    // {label: 'Dress Code:', value: 'Formal'}
 ];
 
 const WeddingDetails = () => (
@@ -55,14 +56,17 @@ const WeddingDetails = () => (
                         </div>
                     ))}
                     <div className="text-start" style={styles.rsvpText}>
-                        <strong>RSVP by 22<sup style={{fontSize: '10px'}}>nd</sup> September 2024</strong>
+                        <>Please note that the full day is an adults-only event.</>
+                    </div>
+                    <div className="text-start" style={styles.rsvpText}>
+                        <strong>RSVP by 30<sup style={{fontSize: '10px'}}>th</sup> September 2025</strong>
                     </div>
                 </div>
             </div>
 
             <div className="col-lg-6 order-lg-2 order-1 mb-4">
                 <img
-                    src="https://spaseekers.imgix.net/m/0/back-view.jpg?ixlib=gatsbyHook-1.7.4&fit=min&auto=format&w=800&h=600"
+                    src={image1}
                     alt="Wedding Venue"
                     className="img-fluid rounded shadow-sm"
                 />
