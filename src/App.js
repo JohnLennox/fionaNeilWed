@@ -12,8 +12,8 @@ import {useState} from "react";
 
 function App() {
 
-    const [colour, setColour] = useState('#E6E5DC');
-    const [textColour, setTextColour] = useState('#000000');
+    const [colour, setColour] = useState('#4B0114');
+    const [textColour, setTextColour] = useState('#CFCFCF');
 
     return (
         <div style={{backgroundColor: colour, color: textColour}}>
