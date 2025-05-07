@@ -26,11 +26,11 @@ function App() {
                 <Section id="gifts" content={<Gifts/>}/>
                 <Section id="rsvp" content={<RSVP/>}/>
                 <Section id="contact" content={<ContactDetails/>}/>
-                <p>Background colour</p>
-                <input type={"color"} value={colour} onChange={(event) =>setColour(event.target.value)}/>
+                {/*<p>Background colour</p>*/}
+                {/*<input type={"color"} value={colour} onChange={(event) =>setColour(event.target.value)}/>*/}
 
-                <p>Text colour</p>
-                <input type={"color"} value={textColour} onChange={(event) =>setTextColour(event.target.value)}/>
+                {/*<p>Text colour</p>*/}
+                {/*<input type={"color"} value={textColour} onChange={(event) =>setTextColour(event.target.value)}/>*/}
             </div>
         </div>
     );

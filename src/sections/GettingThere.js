@@ -57,7 +57,7 @@ function GettingThere() {
             <div className="col-md-12">
                 <h2>Accommodation</h2>
                 <div style={styles.textStart}>
-                    <p>Accommodation at the venue is limited, all rooms have been reserved for close family of the bride
+                    <p>Accommodation at the venue is limited. All rooms have been reserved for close family of the bride
                         and groom. There are two nearby Premier Inns in Bearsden and Milngavie should you require
                         accommodation.</p>
                     <p>If you have a room reserved at Boclair House, they will require the remaining balance to be paid

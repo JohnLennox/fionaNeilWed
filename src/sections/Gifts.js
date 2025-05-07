@@ -8,6 +8,7 @@ function Gifts() {
                     <h1>Gifts</h1>
                 </div>
             </div>
+            <p>We look forward to enjoying your company on our special day.</p>
             <p>If you would like to give a gift, we would appreciate money or vouchers as a contribution to our
                 future.</p>
             <p>There will be a postbox for cards at the wedding venue but if you prefer to send a card by post,
